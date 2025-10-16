@@ -1,12 +1,14 @@
-export const getAllProducts = (req, res) => {
-  res.send("Fetching all products");
+import { getAllProducts, addProduct, getProductById } from "../services/productService.js";
+
+export const getAllProductsController = (req, res) => {
+  res.send(getAllProducts());
 };
 
-export const addProduct = (req, res) => {
-  res.send("Adding a new product");
+export const addProductController = (req, res) => {
+  res.send(addProduct());
 };
 
-export const getProductById = (req, res) => {
+export const getProductByIdController = (req, res) => {
   const { id } = req.params;
-  res.send(`Fetching product with ID: ${id}`);
+  res.send(getProductById(id));
 };
