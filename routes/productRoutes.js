@@ -1,10 +1,10 @@
 import express from "express";
-import { getAllProducts, addProduct, getProductById } from "../controllers/productController.js";
+import { getAllProductsController, addProductController, getProductByIdController } from "../controllers/productController.js";
 
 const router = express.Router();
 
-router.get("/", getAllProducts);
-router.post("/", addProduct);
-router.get("/:id", getProductById);
+router.get("/", getAllProductsController);
+router.post("/", addProductController);
+router.get("/:id", getProductByIdController);
 
 export default router;
