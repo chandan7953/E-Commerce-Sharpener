@@ -5,7 +5,8 @@ export const getAllProductsController = (req, res) => {
 };
 
 export const addProductController = (req, res) => {
-  res.send(addProduct());
+  const data = req.body.brand;
+  res.json(addProduct(data));
 };
 
 export const getProductByIdController = (req, res) => {

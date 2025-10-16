@@ -2,8 +2,8 @@ export const getAllProducts = () => {
   return "Fetching all products (from productService)";
 };
 
-export const addProduct = () => {
-  return "Adding a new product (from productService)";
+export const addProduct = (data) => {
+  return {val: data};
 };
 
 export const getProductById = (id) => {

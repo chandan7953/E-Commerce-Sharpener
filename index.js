@@ -8,6 +8,9 @@ import path from "path"
 const app = express();
 const PORT = 4000;
 
+app.use(express.static("public"));
+app.use(express.json());
+
 // this is three different in import statement
 import {fileURLToPath} from "url"; 
 const __filename = fileURLToPath(import.meta.url);
